@@ -1,0 +1,18 @@
+{
+  "appTitle": "לוח הכפל",
+  "language": "שפה",
+  "theme": "מראה",
+  "light": "בהיר",
+  "dark": "כהה",
+  "numberTitle": "לוח הכפל של {n}",
+  "numberHint": "לחצו על כרטיס כדי להפוך אותו ולראות את התשובה",
+  "allNumbers": "כל המספרים",
+  "shuffle": "ערבבו",
+  "mix": "מיקס",
+  "mixTitle": "הכל מעורבב!",
+  "mixHint": "תרגילים אקראיים מכל לוחות הכפל",
+  "prevNumber": "המספר הקודם",
+  "nextNumber": "המספר הבא",
+  "unknownNumber": "המספר הזה לא נמצא כאן",
+  "notFound": "העמוד לא נמצא"
+}

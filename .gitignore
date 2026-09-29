@@ -1,0 +1,65 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build output
+dist/
+dist-ssr/
+build/
+*.tsbuildinfo
+
+# Vite
+.vite/
+vite.config.*.timestamp-*
+vitest.config.*.timestamp-*
+
+# Environment variables (keep .env.example if you add one)
+.env
+.env.*
+!.env.example
+
+# Local overrides
+*.local
+.claude/settings.local.json
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Caches
+.cache/
+.eslintcache
+.stylelintcache
+.parcel-cache/
+.turbo/
+
+# Editors and IDEs
+# .vscode/settings.json and extensions.json are shared with the team and tracked in git
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*~
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
