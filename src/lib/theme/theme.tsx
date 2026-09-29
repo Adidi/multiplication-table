@@ -1,6 +1,5 @@
-import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
-
-export type Theme = "light" | "dark";
+import { useEffect, useState, type ReactNode } from "react";
+import { ThemeContext, type Theme } from "./context";
 
 const STORAGE_KEY = "mt-theme";
 const DEFAULT_THEME: Theme = "dark";
@@ -14,13 +13,6 @@ function readStoredTheme(): Theme {
   }
   return DEFAULT_THEME;
 }
-
-type ThemeContextValue = {
-  theme: Theme;
-  setTheme: (theme: Theme) => void;
-};
-
-const ThemeContext = createContext<ThemeContextValue | null>(null);
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setThemeState] = useState<Theme>(readStoredTheme);
@@ -39,10 +31,4 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   }
 
   return <ThemeContext value={{ theme, setTheme }}>{children}</ThemeContext>;
-}
-
-export function useTheme(): ThemeContextValue {
-  const ctx = useContext(ThemeContext);
-  if (!ctx) throw new Error("useTheme must be used inside <ThemeProvider>");
-  return ctx;
 }

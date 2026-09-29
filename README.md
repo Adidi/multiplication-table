@@ -70,9 +70,13 @@ src/
 └── lib/
     ├── tile-colors.ts       # one color per number, shared everywhere
     ├── shuffle.ts           # shuffle helpers and random exercise draw
-    ├── theme.tsx            # light/dark provider
+    ├── theme/
+    │   ├── theme.tsx        # ThemeProvider
+    │   └── context.ts       # useTheme()
     └── i18n/
-        ├── i18n.tsx         # locale provider and t() helper
+        ├── i18n.tsx         # LocaleProvider and t() helper
+        ├── context.ts       # useLocale()
+        ├── langs.ts         # LANGS registry: add new languages here
         ├── en.json
         └── he.json
 ```
@@ -80,7 +84,7 @@ src/
 ## Adding a language
 
 1. Copy `src/lib/i18n/en.json` to `src/lib/i18n/<code>.json` and translate the values. Keep the `{n}` placeholders.
-2. Register it in the `LANGS` map in `src/lib/i18n/i18n.tsx` with its display name and text direction.
+2. Register it in the `LANGS` map in `src/lib/i18n/langs.ts` with its display name and text direction.
 
 That's it. The language picker lists every entry in `LANGS`.
 
