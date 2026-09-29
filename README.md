@@ -92,6 +92,17 @@ That's it. The language picker lists every entry in `LANGS`.
 | `/number/:n`  | Exercises for number `n` (1–10)        |
 | `/mix`        | Random exercises from all the tables   |
 
+## Deployment
+
+The app is deployed to GitHub Pages by the workflow in `.github/workflows/deploy.yml`. Every push to `main` lints, builds, and publishes `dist/` to `https://adidi.github.io/multiplication-table/`.
+
+One-time setup on GitHub: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+
+Notes:
+
+- `vite.config.ts` sets `base` to `/multiplication-table/`. If you rename the repository, update it there.
+- The build also writes `dist/404.html` (a copy of `index.html`) so deep links such as `/number/3` load the app instead of GitHub's 404 page.
+
 ## License
 
 MIT
