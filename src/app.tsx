@@ -1,5 +1,6 @@
 import { DirectionProvider } from "@base-ui/react/direction-provider";
 import { Route, Router, Switch } from "wouter";
+import { ChalkBackdrop } from "./components/chalk-backdrop";
 import { ScrollToTop } from "./components/scroll-to-top";
 import { SiteHeader } from "./components/site-header";
 import { LocaleProvider, useLocale } from "./lib/i18n";
@@ -16,6 +17,7 @@ function Shell() {
   const { dir } = useLocale();
   return (
     <DirectionProvider direction={dir}>
+      <ChalkBackdrop />
       <Router base={ROUTER_BASE}>
         <ScrollToTop />
         <SiteHeader />

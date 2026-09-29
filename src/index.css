@@ -6,6 +6,8 @@
 
 @theme {
   --font-sans: "Varela Round", "Nunito", system-ui, "Segoe UI", Roboto, sans-serif;
+  /* Hand-written look for the chalkboard backdrop */
+  --font-chalk: "Caveat", "Comic Sans MS", cursive;
 }
 
 :root {
@@ -63,6 +65,25 @@ p {
 
   :root[dir="rtl"] & > * {
     direction: rtl;
+  }
+}
+
+/* Gentle drift for a few chalk doodles in the backdrop. */
+@keyframes chalk-float {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -8px;
+  }
+}
+
+@utility chalk-float {
+  animation: chalk-float 9s ease-in-out infinite;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
   }
 }
 
