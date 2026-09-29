@@ -2,6 +2,8 @@
 
 A playful multiplication table game for kids (second grade and up). Pick a number, flip colorful cards to reveal the answers, and shuffle or mix exercises from all the tables.
 
+**Play it here: [adidi.github.io/multiplication-table](https://adidi.github.io/multiplication-table/)**
+
 ## Features
 
 - **Number tiles** – ten big, colorful tiles on the home page, one per number. Each number keeps its own color everywhere in the app.
