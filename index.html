@@ -1,33 +1,33 @@
 <!doctype html>
 <html lang="he" dir="rtl" class="dark">
-  <head>
-    <meta charset="UTF-8" />
-    <!-- Absolute paths: Vite prefixes them with the configured base in both dev and build -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <meta name="theme-color" content="#151a2d" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Multiplication Table</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Varela+Round&family=Caveat:wght@700&display=swap"
-      rel="stylesheet"
-    />
-    <script>
-      // Apply the saved language and theme before first paint to avoid a flash.
-      try {
-        var lang = localStorage.getItem("mt-lang") === "en" ? "en" : "he";
-        document.documentElement.lang = lang;
-        document.documentElement.dir = lang === "he" ? "rtl" : "ltr";
-        if (localStorage.getItem("mt-theme") === "light") {
-          document.documentElement.classList.remove("dark");
-        }
-      } catch (e) {}
-    </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<!-- Absolute paths: Vite prefixes them with the configured base in both dev and build -->
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<meta name="theme-color" content="#151a2d" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Multiplication Table</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Varela+Round&family=Caveat:wght@700&display=swap"
+			rel="stylesheet"
+		/>
+		<script>
+			// Apply the saved language and theme before first paint to avoid a flash.
+			try {
+				var lang = localStorage.getItem('mt-lang') === 'en' ? 'en' : 'he';
+				document.documentElement.lang = lang;
+				document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
+				if (localStorage.getItem('mt-theme') === 'light') {
+					document.documentElement.classList.remove('dark');
+				}
+			} catch (e) {}
+		</script>
+	</head>
+	<body>
+		<div id="root"></div>
+		<script type="module" src="/src/main.tsx"></script>
+	</body>
 </html>

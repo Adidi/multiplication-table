@@ -1,122 +1,121 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 /* Dark mode is chosen by the user (theme picker), not the OS: toggled via a
    .dark class on <html>. */
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --font-sans: "Varela Round", "Nunito", system-ui, "Segoe UI", Roboto, sans-serif;
-  /* Hand-written look for the chalkboard backdrop */
-  --font-chalk: "Caveat", "Comic Sans MS", cursive;
+	--font-sans: 'Varela Round', 'Nunito', system-ui, 'Segoe UI', Roboto, sans-serif;
+	/* Hand-written look for the chalkboard backdrop */
+	--font-chalk: 'Caveat', 'Comic Sans MS', cursive;
 }
 
 :root {
-  --bg-top: #f1f6fc;
-  --bg-bottom: #fbf5fd;
-  --text: #334155;
-  --text-h: #1e1b4b;
+	--bg-top: #f1f6fc;
+	--bg-bottom: #fbf5fd;
+	--text: #334155;
+	--text-h: #1e1b4b;
 
-  font: 18px/145% var(--font-sans);
-  color-scheme: light;
-  color: var(--text);
-  background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%)
-    fixed;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	font: 18px/145% var(--font-sans);
+	color-scheme: light;
+	color: var(--text);
+	background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%) fixed;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 :root.dark {
-  --bg-top: #151a2d;
-  --bg-bottom: #241a33;
-  --text: #cbd5e1;
-  --text-h: #eef2ff;
-  color-scheme: dark;
+	--bg-top: #151a2d;
+	--bg-bottom: #241a33;
+	--text: #cbd5e1;
+	--text-h: #eef2ff;
+	color-scheme: dark;
 }
 
 body {
-  margin: 0;
-  min-height: 100svh;
+	margin: 0;
+	min-height: 100svh;
 }
 
 #root {
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
+	min-height: 100svh;
+	display: flex;
+	flex-direction: column;
 }
 
 h1,
 h2 {
-  color: var(--text-h);
-  font-weight: 700;
-  margin: 0;
+	color: var(--text-h);
+	font-weight: 700;
+	margin: 0;
 }
 
 p {
-  margin: 0;
+	margin: 0;
 }
 
 /* A grid whose cells always run left-to-right (numbers read the same in every
    language), while the content inside each cell still follows the page
    direction so start/end corners flip correctly in RTL. */
 @utility grid-ltr {
-  direction: ltr;
+	direction: ltr;
 
-  :root[dir="rtl"] & > * {
-    direction: rtl;
-  }
+	:root[dir='rtl'] & > * {
+		direction: rtl;
+	}
 }
 
 /* Gentle drift for a few chalk doodles in the backdrop. */
 @keyframes chalk-float {
-  0%,
-  100% {
-    translate: 0 0;
-  }
-  50% {
-    translate: 0 -8px;
-  }
+	0%,
+	100% {
+		translate: 0 0;
+	}
+	50% {
+		translate: 0 -8px;
+	}
 }
 
 @utility chalk-float {
-  animation: chalk-float 9s ease-in-out infinite;
+	animation: chalk-float 9s ease-in-out infinite;
 
-  @media (prefers-reduced-motion: reduce) {
-    animation: none;
-  }
+	@media (prefers-reduced-motion: reduce) {
+		animation: none;
+	}
 }
 
 /* Tile entrance: horizontal flip with a little overshoot, one tile at a time.
    Set --i on the element to stagger the delay. */
 @keyframes tile-in {
-  0% {
-    opacity: 0;
-    transform: perspective(900px) rotateY(-95deg) scale(0.85);
-  }
-  55% {
-    opacity: 1;
-    transform: perspective(900px) rotateY(18deg) scale(1.06);
-  }
-  75% {
-    transform: perspective(900px) rotateY(-9deg) scale(0.98);
-  }
-  90% {
-    transform: perspective(900px) rotateY(4deg) scale(1.01);
-  }
-  100% {
-    opacity: 1;
-    transform: perspective(900px) rotateY(0deg) scale(1);
-  }
+	0% {
+		opacity: 0;
+		transform: perspective(900px) rotateY(-95deg) scale(0.85);
+	}
+	55% {
+		opacity: 1;
+		transform: perspective(900px) rotateY(18deg) scale(1.06);
+	}
+	75% {
+		transform: perspective(900px) rotateY(-9deg) scale(0.98);
+	}
+	90% {
+		transform: perspective(900px) rotateY(4deg) scale(1.01);
+	}
+	100% {
+		opacity: 1;
+		transform: perspective(900px) rotateY(0deg) scale(1);
+	}
 }
 
 @utility tile-enter {
-  animation: tile-in 0.9s ease-out both;
-  animation-delay: calc(var(--i, 0) * 90ms);
-  transform-origin: center;
-  backface-visibility: hidden;
+	animation: tile-in 0.9s ease-out both;
+	animation-delay: calc(var(--i, 0) * 90ms);
+	transform-origin: center;
+	backface-visibility: hidden;
 
-  @media (prefers-reduced-motion: reduce) {
-    animation: none;
-  }
+	@media (prefers-reduced-motion: reduce) {
+		animation: none;
+	}
 }

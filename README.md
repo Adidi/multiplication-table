@@ -92,11 +92,11 @@ That's it. The language picker lists every entry in `LANGS`.
 
 ## Routes
 
-| Path          | Page                                   |
-| ------------- | -------------------------------------- |
-| `/`           | Home: number tiles and the Mix tile    |
-| `/number/:n`  | Exercises for number `n` (1–10)        |
-| `/mix`        | Random exercises from all the tables   |
+| Path         | Page                                 |
+| ------------ | ------------------------------------ |
+| `/`          | Home: number tiles and the Mix tile  |
+| `/number/:n` | Exercises for number `n` (1–10)      |
+| `/mix`       | Random exercises from all the tables |
 
 ## Deployment
 
