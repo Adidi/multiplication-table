@@ -1,5 +1,5 @@
 import { createContext, useContext } from 'react';
-import type { Dir, Lang, StringKey } from '@/lib/i18n/langs';
+import type { Dir, Lang, StringKey } from '@/providers/i18n/langs';
 
 export type TranslateParams = Record<string, string | number>;
 

@@ -1,5 +1,5 @@
 import { Languages } from 'lucide-react';
-import { LANGS, useLocale, type Lang } from '@/lib/i18n';
+import { LANGS, useLocale, type Lang } from '@/providers/i18n';
 import { PopoverMenu, type PopoverMenuOption } from '@/ui/popover-menu';
 
 const OPTIONS: PopoverMenuOption<Lang>[] = (Object.keys(LANGS) as Lang[]).map(code => ({

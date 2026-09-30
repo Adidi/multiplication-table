@@ -1,6 +1,6 @@
 import { MixTile } from '@/components/mix-tile';
 import { NumberTile } from '@/components/number-tile';
-import { NUMBERS } from '@/lib/tile-colors';
+import { NUMBERS } from '@/data';
 
 export function Home() {
 	return (

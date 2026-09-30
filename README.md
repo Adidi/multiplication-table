@@ -65,13 +65,20 @@ src/
 │   ├── site-header.tsx
 │   ├── language-picker.tsx
 │   ├── theme-picker.tsx
-│   ├── back-home-link.tsx
-│   └── scroll-to-top.tsx
+│   └── back-home-link.tsx
+├── hooks/
+│   ├── index.ts             # re-exports every hook
+│   └── use-scroll-to-top.ts # scroll to top on route change
 ├── ui/
 │   └── popover-menu.tsx     # generic popover picker built on Base UI
-└── lib/
-    ├── tile-colors.ts       # one color per number, shared everywhere
-    ├── shuffle.ts           # shuffle helpers and random exercise draw
+├── utils/
+│   ├── index.ts
+│   ├── cn.ts                # className helper (clsx + tailwind-merge)
+│   └── shuffle.ts           # shuffle helpers and random exercise draw
+├── data/
+│   ├── index.ts
+│   └── tile-colors.ts       # one color per number, shared everywhere
+└── providers/
     ├── theme/
     │   ├── theme.tsx        # ThemeProvider
     │   └── context.ts       # useTheme()
@@ -85,8 +92,8 @@ src/
 
 ## Adding a language
 
-1. Copy `src/lib/i18n/en.json` to `src/lib/i18n/<code>.json` and translate the values. Keep the `{n}` placeholders.
-2. Register it in the `LANGS` map in `src/lib/i18n/langs.ts` with its display name and text direction.
+1. Copy `src/providers/i18n/en.json` to `src/providers/i18n/<code>.json` and translate the values. Keep the `{n}` placeholders.
+2. Register it in the `LANGS` map in `src/providers/i18n/langs.ts` with its display name and text direction.
 
 That's it. The language picker lists every entry in `LANGS`.
 

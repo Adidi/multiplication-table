@@ -1,8 +1,8 @@
 import { ChevronLeft, ChevronRight, LayoutGrid, Shuffle } from 'lucide-react';
 import { Link } from 'wouter';
-import { cn } from '@/lib/cn';
-import { useLocale } from '@/lib/i18n';
-import { NUMBERS, tileColor } from '@/lib/tile-colors';
+import { cn } from '@/utils';
+import { useLocale } from '@/providers/i18n';
+import { NUMBERS, tileColor } from '@/data';
 
 type Props = {
 	/** The number shown on the page. Omit (e.g. on the mix page) to hide prev/next. */

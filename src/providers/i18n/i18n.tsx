@@ -1,6 +1,6 @@
 import { useEffect, useState, type ReactNode } from 'react';
-import { LocaleContext, type TranslateParams } from '@/lib/i18n/context';
-import { DEFAULT_LANG, LANGS, isLang, type Lang, type StringKey } from '@/lib/i18n/langs';
+import { LocaleContext, type TranslateParams } from '@/providers/i18n/context';
+import { DEFAULT_LANG, LANGS, isLang, type Lang, type StringKey } from '@/providers/i18n/langs';
 
 const STORAGE_KEY = 'mt-lang';
 

@@ -5,9 +5,9 @@ import { ExerciseGrid } from '@/components/exercise-grid';
 import { NumberNav } from '@/components/number-nav';
 import { PageHeader } from '@/components/page-header';
 import { ShuffleButton } from '@/components/shuffle-button';
-import { useLocale } from '@/lib/i18n';
-import { exercisesOf, shuffle } from '@/lib/shuffle';
-import { NUMBERS, tileColor } from '@/lib/tile-colors';
+import { useLocale } from '@/providers/i18n';
+import { exercisesOf, shuffle } from '@/utils';
+import { NUMBERS, tileColor } from '@/data';
 
 export function NumberPage() {
 	const { n } = useParams<{ n: string }>();

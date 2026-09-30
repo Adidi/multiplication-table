@@ -1,4 +1,4 @@
-import type { Exercise } from '@/lib/shuffle';
+import type { Exercise } from '@/utils';
 import { ExerciseTile } from '@/components/exercise-tile';
 
 type Props = {

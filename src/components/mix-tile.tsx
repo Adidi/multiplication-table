@@ -1,8 +1,8 @@
 import { Shuffle } from 'lucide-react';
 import type { CSSProperties } from 'react';
 import { Link } from 'wouter';
-import { cn } from '@/lib/cn';
-import { useLocale } from '@/lib/i18n';
+import { cn } from '@/utils';
+import { useLocale } from '@/providers/i18n';
 import { TileGloss } from '@/components/number-tile';
 
 type Props = { index?: number };

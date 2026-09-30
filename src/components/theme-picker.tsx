@@ -1,6 +1,6 @@
 import { Moon, Sun, SunMoon } from 'lucide-react';
-import { useLocale } from '@/lib/i18n';
-import { useTheme, type Theme } from '@/lib/theme';
+import { useLocale } from '@/providers/i18n';
+import { useTheme, type Theme } from '@/providers/theme';
 import { PopoverMenu, type PopoverMenuOption } from '@/ui/popover-menu';
 
 export function ThemePicker() {

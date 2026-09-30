@@ -1,5 +1,5 @@
 import { useEffect, useState, type ReactNode } from 'react';
-import { ThemeContext, type Theme } from '@/lib/theme/context';
+import { ThemeContext, type Theme } from '@/providers/theme/context';
 
 const STORAGE_KEY = 'mt-theme';
 const DEFAULT_THEME: Theme = 'dark';

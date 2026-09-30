@@ -1,7 +1,7 @@
 import { Popover } from '@base-ui/react/popover';
 import { Check } from 'lucide-react';
 import { useState, type ReactNode } from 'react';
-import { cn } from '@/lib/cn';
+import { cn } from '@/utils';
 
 export type PopoverMenuOption<T extends string> = {
 	value: T;

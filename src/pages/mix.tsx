@@ -4,8 +4,8 @@ import { ExerciseGrid } from '@/components/exercise-grid';
 import { NumberNav } from '@/components/number-nav';
 import { PageHeader } from '@/components/page-header';
 import { ShuffleButton } from '@/components/shuffle-button';
-import { useLocale } from '@/lib/i18n';
-import { randomExercises } from '@/lib/shuffle';
+import { useLocale } from '@/providers/i18n';
+import { randomExercises } from '@/utils';
 
 const MIX_SIZE = 12;
 

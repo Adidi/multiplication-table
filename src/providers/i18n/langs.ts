@@ -1,5 +1,5 @@
-import en from '@/lib/i18n/en.json';
-import he from '@/lib/i18n/he.json';
+import en from '@/providers/i18n/en.json';
+import he from '@/providers/i18n/he.json';
 
 export type Dir = 'ltr' | 'rtl';
 export type Strings = typeof en;

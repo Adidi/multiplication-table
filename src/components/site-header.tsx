@@ -1,6 +1,6 @@
 import { House } from 'lucide-react';
 import { Link } from 'wouter';
-import { useLocale } from '@/lib/i18n';
+import { useLocale } from '@/providers/i18n';
 import { LanguagePicker } from '@/components/language-picker';
 import { ThemePicker } from '@/components/theme-picker';
 

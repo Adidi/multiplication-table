@@ -1,6 +1,6 @@
 import { useState, type CSSProperties } from 'react';
-import { cn } from '@/lib/cn';
-import { tileColor } from '@/lib/tile-colors';
+import { cn } from '@/utils';
+import { tileColor } from '@/data';
 import { TileGloss } from '@/components/number-tile';
 
 type Props = {

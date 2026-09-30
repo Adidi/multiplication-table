@@ -1,7 +1,7 @@
 import type { CSSProperties } from 'react';
 import { Link } from 'wouter';
-import { cn } from '@/lib/cn';
-import { tileColor } from '@/lib/tile-colors';
+import { cn } from '@/utils';
+import { tileColor } from '@/data';
 
 type Props = {
 	num: number;

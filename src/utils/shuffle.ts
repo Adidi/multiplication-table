@@ -1,4 +1,4 @@
-import { NUMBERS } from '@/lib/tile-colors';
+import { NUMBERS } from '@/data';
 
 export type Exercise = { num1: number; num2: number };
 

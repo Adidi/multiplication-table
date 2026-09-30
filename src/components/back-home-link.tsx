@@ -1,7 +1,7 @@
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'wouter';
-import { cn } from '@/lib/cn';
-import { useLocale } from '@/lib/i18n';
+import { cn } from '@/utils';
+import { useLocale } from '@/providers/i18n';
 
 export function BackHomeLink({ className }: { className?: string }) {
 	const { t } = useLocale();

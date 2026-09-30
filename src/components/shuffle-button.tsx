@@ -1,6 +1,6 @@
 import { Shuffle } from 'lucide-react';
-import { cn } from '@/lib/cn';
-import { useLocale } from '@/lib/i18n';
+import { cn } from '@/utils';
+import { useLocale } from '@/providers/i18n';
 
 type Props = { onClick: () => void; className?: string };
 

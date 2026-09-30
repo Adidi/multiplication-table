@@ -1,5 +1,5 @@
 import { BackHomeLink } from '@/components/back-home-link';
-import { useLocale } from '@/lib/i18n';
+import { useLocale } from '@/providers/i18n';
 
 export function NotFound() {
 	const { t } = useLocale();
