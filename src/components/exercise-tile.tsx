@@ -12,8 +12,8 @@ type Props = {
 
 /**
  * A flip card. Front shows the exercise ("3 × 4"); tapping flips it
- * horizontally to reveal the answer, with the exercise repeated small in the
- * top inline-start corner. Color is always taken from num1 so every tile of a
+ * horizontally to reveal the answer, with the exercise repeated small and
+ * centered along the top. Color is always taken from num1 so every tile of a
  * number matches that number's home tile.
  */
 export function ExerciseTile({ num1, num2, index = 0 }: Props) {
@@ -62,11 +62,11 @@ export function ExerciseTile({ num1, num2, index = 0 }: Props) {
 						<TileGloss />
 					</span>
 
-					{/* Back: the answer, with the exercise small in the start corner */}
+					{/* Back: the answer, with the exercise small and centered at the top */}
 					<span className={cn(face, 'rotate-y-180')}>
 						{/* Nudged down so it never collides with the pill */}
 						<span className="pt-[18cqw] text-[34cqw] leading-none font-bold drop-shadow-md">{answer}</span>
-						<span className="absolute start-[9cqw] top-[7cqw] rounded-full bg-white/25 px-[5cqw] py-[2cqw] text-[15cqw] leading-tight font-bold">
+						<span className="absolute inset-x-0 top-[7cqw] mx-auto w-fit rounded-full bg-white/25 px-[5cqw] py-[2cqw] text-[15cqw] leading-tight font-bold">
 							{/* bdi keeps "7 × 1" in reading order while the pill itself follows the page direction */}
 							<bdi dir="ltr">{exercise}</bdi>
 						</span>
